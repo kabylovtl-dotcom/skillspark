@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
 import { LanguageToggle } from "@/components/ui/language-toggle";
+import { AuthButton } from "@/components/auth/AuthButton";
 import { Menu, X, Atom, Info, BookOpen, PenTool } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "react-router-dom";
@@ -55,6 +56,7 @@ export const Header = () => {
           <div className="flex items-center space-x-2">
             <LanguageToggle />
             <ThemeToggle />
+            <AuthButton />
             <Link to="/simulations">
               <Button variant="hero" size="sm" className="hidden md:flex">
                 {t('nav.get.started')}
