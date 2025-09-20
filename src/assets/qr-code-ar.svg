@@ -1,0 +1,287 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+  <!-- Максимально детальный QR код 800x800 высокого разрешения -->
+  <rect width="800" height="800" fill="white"/>
+  
+  <!-- Основная сетка QR кода -->
+  <defs>
+    <pattern id="qrpattern" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <rect width="24" height="24" fill="white"/>
+    </pattern>
+  </defs>
+  
+  <!-- Верхний левый угловой маркер -->
+  <rect x="32" y="32" width="200" height="200" fill="black"/>
+  <rect x="56" y="56" width="152" height="152" fill="white"/>
+  <rect x="80" y="80" width="104" height="104" fill="black"/>
+  <rect x="104" y="104" width="56" height="56" fill="white"/>
+  <rect x="120" y="120" width="24" height="24" fill="black"/>
+  
+  <!-- Верхний правый угловой маркер -->
+  <rect x="568" y="32" width="200" height="200" fill="black"/>
+  <rect x="592" y="56" width="152" height="152" fill="white"/>
+  <rect x="616" y="80" width="104" height="104" fill="black"/>
+  <rect x="640" y="104" width="56" height="56" fill="white"/>
+  <rect x="656" y="120" width="24" height="24" fill="black"/>
+  
+  <!-- Нижний левый угловой маркер -->
+  <rect x="32" y="568" width="200" height="200" fill="black"/>
+  <rect x="56" y="592" width="152" height="152" fill="white"/>
+  <rect x="80" y="616" width="104" height="104" fill="black"/>
+  <rect x="104" y="640" width="56" height="56" fill="white"/>
+  <rect x="120" y="656" width="24" height="24" fill="black"/>
+  
+  <!-- Синхронизационные полосы -->
+  <!-- Верхняя -->
+  <rect x="256" y="32" width="24" height="24" fill="black"/>
+  <rect x="304" y="32" width="24" height="24" fill="black"/>
+  <rect x="352" y="32" width="24" height="24" fill="black"/>
+  <rect x="400" y="32" width="24" height="24" fill="black"/>
+  <rect x="448" y="32" width="24" height="24" fill="black"/>
+  <rect x="496" y="32" width="24" height="24" fill="black"/>
+  <rect x="544" y="32" width="24" height="24" fill="black"/>
+  
+  <!-- Левая -->
+  <rect x="32" y="256" width="24" height="24" fill="black"/>
+  <rect x="32" y="304" width="24" height="24" fill="black"/>
+  <rect x="32" y="352" width="24" height="24" fill="black"/>
+  <rect x="32" y="400" width="24" height="24" fill="black"/>
+  <rect x="32" y="448" width="24" height="24" fill="black"/>
+  <rect x="32" y="496" width="24" height="24" fill="black"/>
+  <rect x="32" y="544" width="24" height="24" fill="black"/>
+  
+  <!-- Правая -->
+  <rect x="744" y="256" width="24" height="24" fill="black"/>
+  <rect x="744" y="304" width="24" height="24" fill="black"/>
+  <rect x="744" y="352" width="24" height="24" fill="black"/>
+  <rect x="744" y="400" width="24" height="24" fill="black"/>
+  <rect x="744" y="448" width="24" height="24" fill="black"/>
+  <rect x="744" y="496" width="24" height="24" fill="black"/>
+  <rect x="744" y="544" width="24" height="24" fill="black"/>
+  
+  <!-- Нижняя -->
+  <rect x="256" y="744" width="24" height="24" fill="black"/>
+  <rect x="304" y="744" width="24" height="24" fill="black"/>
+  <rect x="352" y="744" width="24" height="24" fill="black"/>
+  <rect x="400" y="744" width="24" height="24" fill="black"/>
+  <rect x="448" y="744" width="24" height="24" fill="black"/>
+  <rect x="496" y="744" width="24" height="24" fill="black"/>
+  <rect x="544" y="744" width="24" height="24" fill="black"/>
+  
+  <!-- Центральный логотип AR -->
+  <rect x="344" y="344" width="112" height="112" fill="#6BB6FF" rx="8" stroke="black" stroke-width="2"/>
+  <text x="400" y="415" text-anchor="middle" fill="black" font-size="48" font-weight="bold" font-family="Arial, sans-serif">AR</text>
+  
+  <!-- Детальный паттерн данных по всему QR коду -->
+  <!-- Строка 1 -->
+  <rect x="256" y="80" width="24" height="24" fill="black"/>
+  <rect x="304" y="80" width="24" height="24" fill="black"/>
+  <rect x="328" y="80" width="24" height="24" fill="black"/>
+  <rect x="376" y="80" width="24" height="24" fill="black"/>
+  <rect x="424" y="80" width="24" height="24" fill="black"/>
+  <rect x="448" y="80" width="24" height="24" fill="black"/>
+  <rect x="496" y="80" width="24" height="24" fill="black"/>
+  <rect x="544" y="80" width="24" height="24" fill="black"/>
+  
+  <!-- Строка 2 -->
+  <rect x="280" y="104" width="24" height="24" fill="black"/>
+  <rect x="328" y="104" width="24" height="24" fill="black"/>
+  <rect x="352" y="104" width="24" height="24" fill="black"/>
+  <rect x="400" y="104" width="24" height="24" fill="black"/>
+  <rect x="472" y="104" width="24" height="24" fill="black"/>
+  <rect x="520" y="104" width="24" height="24" fill="black"/>
+  
+  <!-- Строка 3 -->
+  <rect x="256" y="128" width="24" height="24" fill="black"/>
+  <rect x="280" y="128" width="24" height="24" fill="black"/>
+  <rect x="352" y="128" width="24" height="24" fill="black"/>
+  <rect x="376" y="128" width="24" height="24" fill="black"/>
+  <rect x="448" y="128" width="24" height="24" fill="black"/>
+  <rect x="496" y="128" width="24" height="24" fill="black"/>
+  <rect x="520" y="128" width="24" height="24" fill="black"/>
+  
+  <!-- Строка 4 -->
+  <rect x="280" y="152" width="24" height="24" fill="black"/>
+  <rect x="304" y="152" width="24" height="24" fill="black"/>
+  <rect x="352" y="152" width="24" height="24" fill="black"/>
+  <rect x="400" y="152" width="24" height="24" fill="black"/>
+  <rect x="448" y="152" width="24" height="24" fill="black"/>
+  <rect x="472" y="152" width="24" height="24" fill="black"/>
+  <rect x="520" y="152" width="24" height="24" fill="black"/>
+  <rect x="544" y="152" width="24" height="24" fill="black"/>
+  
+  <!-- Строка 5 -->
+  <rect x="256" y="176" width="24" height="24" fill="black"/>
+  <rect x="304" y="176" width="24" height="24" fill="black"/>
+  <rect x="328" y="176" width="24" height="24" fill="black"/>
+  <rect x="376" y="176" width="24" height="24" fill="black"/>
+  <rect x="400" y="176" width="24" height="24" fill="black"/>
+  <rect x="472" y="176" width="24" height="24" fill="black"/>
+  <rect x="496" y="176" width="24" height="24" fill="black"/>
+  <rect x="544" y="176" width="24" height="24" fill="black"/>
+  
+  <!-- Строка 6 -->
+  <rect x="280" y="200" width="24" height="24" fill="black"/>
+  <rect x="328" y="200" width="24" height="24" fill="black"/>
+  <rect x="352" y="200" width="24" height="24" fill="black"/>
+  <rect x="424" y="200" width="24" height="24" fill="black"/>
+  <rect x="448" y="200" width="24" height="24" fill="black"/>
+  <rect x="520" y="200" width="24" height="24" fill="black"/>
+  
+  <!-- Левая область данных -->
+  <rect x="80" y="256" width="24" height="24" fill="black"/>
+  <rect x="128" y="256" width="24" height="24" fill="black"/>
+  <rect x="152" y="256" width="24" height="24" fill="black"/>
+  <rect x="200" y="256" width="24" height="24" fill="black"/>
+  
+  <rect x="104" y="280" width="24" height="24" fill="black"/>
+  <rect x="152" y="280" width="24" height="24" fill="black"/>
+  <rect x="176" y="280" width="24" height="24" fill="black"/>
+  <rect x="224" y="280" width="24" height="24" fill="black"/>
+  
+  <rect x="80" y="304" width="24" height="24" fill="black"/>
+  <rect x="128" y="304" width="24" height="24" fill="black"/>
+  <rect x="176" y="304" width="24" height="24" fill="black"/>
+  <rect x="200" y="304" width="24" height="24" fill="black"/>
+  
+  <rect x="104" y="328" width="24" height="24" fill="black"/>
+  <rect x="128" y="328" width="24" height="24" fill="black"/>
+  <rect x="152" y="328" width="24" height="24" fill="black"/>
+  <rect x="224" y="328" width="24" height="24" fill="black"/>
+  
+  <!-- Правая область данных -->
+  <rect x="576" y="256" width="24" height="24" fill="black"/>
+  <rect x="624" y="256" width="24" height="24" fill="black"/>
+  <rect x="648" y="256" width="24" height="24" fill="black"/>
+  <rect x="696" y="256" width="24" height="24" fill="black"/>
+  
+  <rect x="600" y="280" width="24" height="24" fill="black"/>
+  <rect x="648" y="280" width="24" height="24" fill="black"/>
+  <rect x="672" y="280" width="24" height="24" fill="black"/>
+  <rect x="720" y="280" width="24" height="24" fill="black"/>
+  
+  <rect x="576" y="304" width="24" height="24" fill="black"/>
+  <rect x="624" y="304" width="24" height="24" fill="black"/>
+  <rect x="672" y="304" width="24" height="24" fill="black"/>
+  <rect x="696" y="304" width="24" height="24" fill="black"/>
+  
+  <rect x="600" y="328" width="24" height="24" fill="black"/>
+  <rect x="624" y="328" width="24" height="24" fill="black"/>
+  <rect x="648" y="328" width="24" height="24" fill="black"/>
+  <rect x="720" y="328" width="24" height="24" fill="black"/>
+  
+  <!-- Нижние области данных -->
+  <rect x="80" y="480" width="24" height="24" fill="black"/>
+  <rect x="128" y="480" width="24" height="24" fill="black"/>
+  <rect x="152" y="480" width="24" height="24" fill="black"/>
+  <rect x="200" y="480" width="24" height="24" fill="black"/>
+  <rect x="256" y="480" width="24" height="24" fill="black"/>
+  <rect x="304" y="480" width="24" height="24" fill="black"/>
+  <rect x="328" y="480" width="24" height="24" fill="black"/>
+  <rect x="376" y="480" width="24" height="24" fill="black"/>
+  <rect x="424" y="480" width="24" height="24" fill="black"/>
+  <rect x="448" y="480" width="24" height="24" fill="black"/>
+  <rect x="496" y="480" width="24" height="24" fill="black"/>
+  <rect x="544" y="480" width="24" height="24" fill="black"/>
+  <rect x="576" y="480" width="24" height="24" fill="black"/>
+  <rect x="624" y="480" width="24" height="24" fill="black"/>
+  <rect x="672" y="480" width="24" height="24" fill="black"/>
+  <rect x="696" y="480" width="24" height="24" fill="black"/>
+  
+  <rect x="104" y="504" width="24" height="24" fill="black"/>
+  <rect x="152" y="504" width="24" height="24" fill="black"/>
+  <rect x="176" y="504" width="24" height="24" fill="black"/>
+  <rect x="224" y="504" width="24" height="24" fill="black"/>
+  <rect x="280" y="504" width="24" height="24" fill="black"/>
+  <rect x="328" y="504" width="24" height="24" fill="black"/>
+  <rect x="352" y="504" width="24" height="24" fill="black"/>
+  <rect x="400" y="504" width="24" height="24" fill="black"/>
+  <rect x="472" y="504" width="24" height="24" fill="black"/>
+  <rect x="520" y="504" width="24" height="24" fill="black"/>
+  <rect x="600" y="504" width="24" height="24" fill="black"/>
+  <rect x="648" y="504" width="24" height="24" fill="black"/>
+  <rect x="672" y="504" width="24" height="24" fill="black"/>
+  <rect x="720" y="504" width="24" height="24" fill="black"/>
+  
+  <rect x="80" y="528" width="24" height="24" fill="black"/>
+  <rect x="128" y="528" width="24" height="24" fill="black"/>
+  <rect x="176" y="528" width="24" height="24" fill="black"/>
+  <rect x="200" y="528" width="24" height="24" fill="black"/>
+  <rect x="256" y="528" width="24" height="24" fill="black"/>
+  <rect x="280" y="528" width="24" height="24" fill="black"/>
+  <rect x="352" y="528" width="24" height="24" fill="black"/>
+  <rect x="376" y="528" width="24" height="24" fill="black"/>
+  <rect x="448" y="528" width="24" height="24" fill="black"/>
+  <rect x="496" y="528" width="24" height="24" fill="black"/>
+  <rect x="520" y="528" width="24" height="24" fill="black"/>
+  <rect x="576" y="528" width="24" height="24" fill="black"/>
+  <rect x="624" y="528" width="24" height="24" fill="black"/>
+  <rect x="672" y="528" width="24" height="24" fill="black"/>
+  <rect x="696" y="528" width="24" height="24" fill="black"/>
+  
+  <rect x="104" y="552" width="24" height="24" fill="black"/>
+  <rect x="128" y="552" width="24" height="24" fill="black"/>
+  <rect x="152" y="552" width="24" height="24" fill="black"/>
+  <rect x="224" y="552" width="24" height="24" fill="black"/>
+  <rect x="280" y="552" width="24" height="24" fill="black"/>
+  <rect x="304" y="552" width="24" height="24" fill="black"/>
+  <rect x="328" y="552" width="24" height="24" fill="black"/>
+  <rect x="400" y="552" width="24" height="24" fill="black"/>
+  <rect x="448" y="552" width="24" height="24" fill="black"/>
+  <rect x="472" y="552" width="24" height="24" fill="black"/>
+  <rect x="520" y="552" width="24" height="24" fill="black"/>
+  <rect x="544" y="552" width="24" height="24" fill="black"/>
+  <rect x="600" y="552" width="24" height="24" fill="black"/>
+  <rect x="624" y="552" width="24" height="24" fill="black"/>
+  <rect x="648" y="552" width="24" height="24" fill="black"/>
+  <rect x="720" y="552" width="24" height="24" fill="black"/>
+  
+  <!-- Нижняя строка данных -->
+  <rect x="256" y="600" width="24" height="24" fill="black"/>
+  <rect x="280" y="600" width="24" height="24" fill="black"/>
+  <rect x="328" y="600" width="24" height="24" fill="black"/>
+  <rect x="352" y="600" width="24" height="24" fill="black"/>
+  <rect x="400" y="600" width="24" height="24" fill="black"/>
+  <rect x="472" y="600" width="24" height="24" fill="black"/>
+  <rect x="520" y="600" width="24" height="24" fill="black"/>
+  
+  <rect x="256" y="624" width="24" height="24" fill="black"/>
+  <rect x="304" y="624" width="24" height="24" fill="black"/>
+  <rect x="328" y="624" width="24" height="24" fill="black"/>
+  <rect x="376" y="624" width="24" height="24" fill="black"/>
+  <rect x="424" y="624" width="24" height="24" fill="black"/>
+  <rect x="448" y="624" width="24" height="24" fill="black"/>
+  <rect x="496" y="624" width="24" height="24" fill="black"/>
+  <rect x="544" y="624" width="24" height="24" fill="black"/>
+  
+  <rect x="280" y="648" width="24" height="24" fill="black"/>
+  <rect x="328" y="648" width="24" height="24" fill="black"/>
+  <rect x="352" y="648" width="24" height="24" fill="black"/>
+  <rect x="400" y="648" width="24" height="24" fill="black"/>
+  <rect x="472" y="648" width="24" height="24" fill="black"/>
+  <rect x="520" y="648" width="24" height="24" fill="black"/>
+  
+  <rect x="256" y="672" width="24" height="24" fill="black"/>
+  <rect x="304" y="672" width="24" height="24" fill="black"/>
+  <rect x="328" y="672" width="24" height="24" fill="black"/>
+  <rect x="376" y="672" width="24" height="24" fill="black"/>
+  <rect x="424" y="672" width="24" height="24" fill="black"/>
+  <rect x="448" y="672" width="24" height="24" fill="black"/>
+  <rect x="496" y="672" width="24" height="24" fill="black"/>
+  <rect x="544" y="672" width="24" height="24" fill="black"/>
+  
+  <rect x="280" y="696" width="24" height="24" fill="black"/>
+  <rect x="328" y="696" width="24" height="24" fill="black"/>
+  <rect x="352" y="696" width="24" height="24" fill="black"/>
+  <rect x="400" y="696" width="24" height="24" fill="black"/>
+  <rect x="472" y="696" width="24" height="24" fill="black"/>
+  <rect x="520" y="696" width="24" height="24" fill="black"/>
+  
+  <rect x="256" y="720" width="24" height="24" fill="black"/>
+  <rect x="304" y="720" width="24" height="24" fill="black"/>
+  <rect x="328" y="720" width="24" height="24" fill="black"/>
+  <rect x="376" y="720" width="24" height="24" fill="black"/>
+  <rect x="424" y="720" width="24" height="24" fill="black"/>
+  <rect x="448" y="720" width="24" height="24" fill="black"/>
+  <rect x="496" y="720" width="24" height="24" fill="black"/>
+  <rect x="544" y="720" width="24" height="24" fill="black"/>
+</svg>

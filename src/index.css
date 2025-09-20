@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SkillSpark KG Design System - Educational STEM Platform */
+
+@layer base {
+  :root {
+    /* Educational Color Palette */
+    --background: 0 0% 100%;
+    --foreground: 222 84% 4.9%;
+    
+    /* Science Blue Primary */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 217 91% 70%;
+    --primary-dark: 217 91% 50%;
+    
+    /* Success Green for Interactive Elements */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 76% 46%;
+    
+    /* Warning Orange for Attention */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    
+    /* Clean Grays */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 14% 20%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    
+    /* Card and Surface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 4.9%;
+    
+    /* Interactive States */
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Border and Input */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+    
+    /* Educational Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(var(--success-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--success)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 14% 98%) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 6px -1px hsl(var(--primary) / 0.1);
+    --shadow-medium: 0 10px 25px -3px hsl(var(--primary) / 0.1);
+    --shadow-strong: 0 20px 40px -12px hsl(var(--primary) / 0.15);
+    
+    /* Animation Variables */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Educational Theme */
+    --background: 222 47% 7%;
+    --foreground: 220 14% 96%;
+    
+    /* Dark Primary */
+    --primary: 217 91% 65%;
+    --primary-foreground: 222 47% 7%;
+    --primary-light: 217 91% 75%;
+    --primary-dark: 217 91% 55%;
+    
+    /* Dark Success */
+    --success: 142 76% 40%;
+    --success-foreground: 222 47% 7%;
+    --success-light: 142 76% 50%;
+    
+    /* Dark Warning */
+    --warning: 38 92% 55%;
+    --warning-foreground: 222 47% 7%;
+    
+    /* Dark Surfaces */
+    --card: 222 47% 11%;
+    --card-foreground: 220 14% 96%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 220 14% 96%;
+    
+    /* Dark Secondary */
+    --secondary: 222 47% 11%;
+    --secondary-foreground: 220 14% 96%;
+    --muted: 222 47% 11%;
+    --muted-foreground: 220 9% 60%;
+    
+    /* Dark Interactive */
+    --accent: 217 91% 65%;
+    --accent-foreground: 222 47% 7%;
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 220 14% 96%;
+    
+    /* Dark Borders */
+    --border: 222 47% 17%;
+    --input: 222 47% 17%;
+    --ring: 217 91% 65%;
+    
+    /* Dark Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(var(--success-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--success)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(222 47% 11%) 0%, hsl(222 47% 13%) 100%);
+    
+    /* Dark Shadows */
+    --shadow-soft: 0 4px 6px -1px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 10px 25px -3px hsl(0 0% 0% / 0.3);
+    --shadow-strong: 0 20px 40px -12px hsl(0 0% 0% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  
+  /* Utility Classes for Design System */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-success {
+    background: var(--gradient-success);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .shadow-strong {
+    box-shadow: var(--shadow-strong);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  /* Custom animation keyframes */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
+    50% { box-shadow: 0 0 30px hsl(var(--primary) / 0.6); }
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+}
