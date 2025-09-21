@@ -6,58 +6,62 @@
 
 @layer base {
   :root {
-    /* Educational Color Palette */
-    --background: 0 0% 100%;
-    --foreground: 222 84% 4.9%;
+    /* New Purple-Pink Color Palette - Light Theme */
+    --background: 17 78% 91%; /* #FBE4D8 - Light peach */
+    --foreground: 300 100% 5%; /* #190019 - Very dark purple */
     
-    /* Science Blue Primary */
-    --primary: 217 91% 60%;
-    --primary-foreground: 0 0% 100%;
-    --primary-light: 217 91% 70%;
-    --primary-dark: 217 91% 50%;
+    /* Primary Purple */
+    --primary: 262 61% 18%; /* #2B124C - Dark purple */
+    --primary-foreground: 17 78% 91%; /* #FBE4D8 - Light peach */
+    --primary-light: 295 35% 35%; /* Lighter version of #522558 */
+    --primary-dark: 300 100% 5%; /* #190019 - Very dark purple */
     
-    /* Success Green for Interactive Elements */
-    --success: 142 76% 36%;
-    --success-foreground: 0 0% 100%;
-    --success-light: 142 76% 46%;
+    /* Secondary Purple-Pink */
+    --secondary: 325 25% 43%; /* #854F6C - Medium purple-pink */
+    --secondary-foreground: 17 78% 91%; /* #FBE4D8 - Light peach */
     
-    /* Warning Orange for Attention */
-    --warning: 38 92% 50%;
-    --warning-foreground: 0 0% 100%;
+    /* Accent Pink */
+    --accent: 6 35% 78%; /* #DFB6B2 - Light pink */
+    --accent-foreground: 300 100% 5%; /* #190019 - Very dark purple */
     
-    /* Clean Grays */
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 220 14% 20%;
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 9% 46%;
+    /* Success - Adjusted for purple theme */
+    --success: 295 35% 25%; /* #522558 - Medium purple */
+    --success-foreground: 17 78% 91%; /* #FBE4D8 - Light peach */
+    --success-light: 325 25% 53%; /* Lighter purple-pink */
+    
+    /* Warning - Warm accent */
+    --warning: 17 78% 75%; /* Darker peach */
+    --warning-foreground: 300 100% 5%; /* #190019 - Very dark purple */
+    
+    /* Muted colors */
+    --muted: 6 35% 85%; /* Very light pink */
+    --muted-foreground: 262 61% 25%; /* Darker purple for text */
     
     /* Card and Surface Colors */
-    --card: 0 0% 100%;
-    --card-foreground: 222 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 84% 4.9%;
+    --card: 17 78% 95%; /* Very light peach */
+    --card-foreground: 300 100% 5%; /* #190019 - Very dark purple */
+    --popover: 17 78% 95%; /* Very light peach */
+    --popover-foreground: 300 100% 5%; /* #190019 - Very dark purple */
     
     /* Interactive States */
-    --accent: 217 91% 60%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 325 25% 43%; /* #854F6C - Medium purple-pink */
+    --destructive-foreground: 17 78% 91%; /* #FBE4D8 - Light peach */
     
     /* Border and Input */
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 217 91% 60%;
+    --border: 6 35% 82%; /* Light pink border */
+    --input: 6 35% 85%; /* Very light pink input */
+    --ring: 262 61% 18%; /* #2B124C - Dark purple focus ring */
     
-    /* Educational Gradients */
+    /* Purple-Pink Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
-    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(var(--success-light)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--success)) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 14% 98%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
     
     /* Shadows */
     --shadow-soft: 0 4px 6px -1px hsl(var(--primary) / 0.1);
-    --shadow-medium: 0 10px 25px -3px hsl(var(--primary) / 0.1);
-    --shadow-strong: 0 20px 40px -12px hsl(var(--primary) / 0.15);
+    --shadow-medium: 0 10px 25px -3px hsl(var(--primary) / 0.15);
+    --shadow-strong: 0 20px 40px -12px hsl(var(--primary) / 0.2);
     
     /* Animation Variables */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -65,76 +69,80 @@
 
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 17 78% 95%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-foreground: 300 100% 5%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary: 262 61% 18%;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-primary-foreground: 17 78% 91%;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent: 6 35% 85%;
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-accent-foreground: 300 100% 5%;
 
-    --sidebar-border: 220 13% 91%;
+    --sidebar-border: 6 35% 82%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 262 61% 18%;
   }
 
   .dark {
-    /* Dark Educational Theme */
-    --background: 222 47% 7%;
-    --foreground: 220 14% 96%;
+    /* New Purple-Pink Color Palette - Dark Theme */
+    --background: 300 100% 5%; /* #190019 - Very dark purple */
+    --foreground: 17 78% 91%; /* #FBE4D8 - Light peach */
     
     /* Dark Primary */
-    --primary: 217 91% 65%;
-    --primary-foreground: 222 47% 7%;
-    --primary-light: 217 91% 75%;
-    --primary-dark: 217 91% 55%;
-    
-    /* Dark Success */
-    --success: 142 76% 40%;
-    --success-foreground: 222 47% 7%;
-    --success-light: 142 76% 50%;
-    
-    /* Dark Warning */
-    --warning: 38 92% 55%;
-    --warning-foreground: 222 47% 7%;
-    
-    /* Dark Surfaces */
-    --card: 222 47% 11%;
-    --card-foreground: 220 14% 96%;
-    --popover: 222 47% 11%;
-    --popover-foreground: 220 14% 96%;
+    --primary: 262 61% 28%; /* Lighter dark purple */
+    --primary-foreground: 17 78% 91%; /* #FBE4D8 - Light peach */
+    --primary-light: 295 35% 35%; /* #522558 - Medium purple */
+    --primary-dark: 300 100% 5%; /* #190019 - Very dark purple */
     
     /* Dark Secondary */
-    --secondary: 222 47% 11%;
-    --secondary-foreground: 220 14% 96%;
-    --muted: 222 47% 11%;
-    --muted-foreground: 220 9% 60%;
+    --secondary: 325 25% 53%; /* Lighter purple-pink */
+    --secondary-foreground: 17 78% 91%; /* #FBE4D8 - Light peach */
+    
+    /* Dark Accent */
+    --accent: 6 35% 68%; /* Darker pink */
+    --accent-foreground: 300 100% 5%; /* #190019 - Very dark purple */
+    
+    /* Dark Success */
+    --success: 295 35% 35%; /* #522558 - Medium purple */
+    --success-foreground: 17 78% 91%; /* #FBE4D8 - Light peach */
+    --success-light: 325 25% 43%; /* #854F6C - Medium purple-pink */
+    
+    /* Dark Warning */
+    --warning: 17 78% 65%; /* Darker peach */
+    --warning-foreground: 300 100% 5%; /* #190019 - Very dark purple */
+    
+    /* Dark Muted */
+    --muted: 262 61% 8%; /* Very dark purple */
+    --muted-foreground: 6 35% 78%; /* #DFB6B2 - Light pink */
+    
+    /* Dark Surfaces */
+    --card: 262 61% 8%; /* Very dark purple */
+    --card-foreground: 17 78% 91%; /* #FBE4D8 - Light peach */
+    --popover: 262 61% 8%; /* Very dark purple */
+    --popover-foreground: 17 78% 91%; /* #FBE4D8 - Light peach */
     
     /* Dark Interactive */
-    --accent: 217 91% 65%;
-    --accent-foreground: 222 47% 7%;
-    --destructive: 0 84% 65%;
-    --destructive-foreground: 220 14% 96%;
+    --destructive: 325 25% 53%; /* Lighter purple-pink */
+    --destructive-foreground: 17 78% 91%; /* #FBE4D8 - Light peach */
     
     /* Dark Borders */
-    --border: 222 47% 17%;
-    --input: 222 47% 17%;
-    --ring: 217 91% 65%;
+    --border: 262 61% 12%; /* Dark purple border */
+    --input: 262 61% 10%; /* Very dark purple input */
+    --ring: 262 61% 28%; /* Dark purple focus ring */
     
     /* Dark Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
-    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(var(--success-light)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--success)) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(222 47% 11%) 0%, hsl(222 47% 13%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
     
     /* Dark Shadows */
-    --shadow-soft: 0 4px 6px -1px hsl(0 0% 0% / 0.3);
-    --shadow-medium: 0 10px 25px -3px hsl(0 0% 0% / 0.3);
-    --shadow-strong: 0 20px 40px -12px hsl(0 0% 0% / 0.4);
+    --shadow-soft: 0 4px 6px -1px hsl(0 0% 0% / 0.4);
+    --shadow-medium: 0 10px 25px -3px hsl(0 0% 0% / 0.4);
+    --shadow-strong: 0 20px 40px -12px hsl(0 0% 0% / 0.5);
   }
 }
 

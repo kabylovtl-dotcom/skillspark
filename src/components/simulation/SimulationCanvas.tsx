@@ -97,7 +97,7 @@ export const SimulationCanvas = ({ simulationId, className }: SimulationCanvasPr
     ctx.clearRect(0, 0, width, height);
     
     // Set background
-    ctx.fillStyle = '#f8fafc';
+    ctx.fillStyle = '#fbe4d8';
     ctx.fillRect(0, 0, width, height);
     
     // Add grid
@@ -123,7 +123,7 @@ export const SimulationCanvas = ({ simulationId, className }: SimulationCanvasPr
   };
 
   const drawGrid = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
-    ctx.strokeStyle = '#e2e8f0';
+    ctx.strokeStyle = '#dfb6b2';
     ctx.lineWidth = 1;
     
     const gridSize = 20;
@@ -154,11 +154,11 @@ export const SimulationCanvas = ({ simulationId, className }: SimulationCanvasPr
     const bobY = centerY + length * Math.cos(currentAngle);
     
     // Draw pivot
-    ctx.fillStyle = '#374151';
+    ctx.fillStyle = '#2b124c';
     ctx.fillRect(centerX - 5, centerY - 5, 10, 10);
     
     // Draw string
-    ctx.strokeStyle = '#374151';
+    ctx.strokeStyle = '#2b124c';
     ctx.lineWidth = 2;
     ctx.beginPath();
     ctx.moveTo(centerX, centerY);
@@ -166,7 +166,7 @@ export const SimulationCanvas = ({ simulationId, className }: SimulationCanvasPr
     ctx.stroke();
     
     // Draw bob
-    ctx.fillStyle = '#ef4444';
+    ctx.fillStyle = '#854f6c';
     ctx.beginPath();
     ctx.arc(bobX, bobY, 15, 0, 2 * Math.PI);
     ctx.fill();
@@ -174,14 +174,14 @@ export const SimulationCanvas = ({ simulationId, className }: SimulationCanvasPr
     // Draw measurement indicators
     if (viewMode === '2d') {
       // Angle arc
-      ctx.strokeStyle = '#3b82f6';
+      ctx.strokeStyle = '#522558';
       ctx.lineWidth = 2;
       ctx.beginPath();
       ctx.arc(centerX, centerY, 30, Math.PI / 2, Math.PI / 2 + currentAngle, currentAngle > 0);
       ctx.stroke();
       
       // Angle text
-      ctx.fillStyle = '#3b82f6';
+      ctx.fillStyle = '#522558';
       ctx.font = '14px sans-serif';
       ctx.fillText(`${Math.abs(currentAngle * 180 / Math.PI).toFixed(1)}°`, centerX + 35, centerY + 20);
     }
@@ -200,7 +200,7 @@ export const SimulationCanvas = ({ simulationId, className }: SimulationCanvasPr
     const y = startY - (vy * currentTime * 10 - 0.5 * g * currentTime * currentTime * 100);
     
     // Draw ground
-    ctx.strokeStyle = '#22c55e';
+    ctx.strokeStyle = '#522558';
     ctx.lineWidth = 3;
     ctx.beginPath();
     ctx.moveTo(0, height - 20);
@@ -208,13 +208,13 @@ export const SimulationCanvas = ({ simulationId, className }: SimulationCanvasPr
     ctx.stroke();
     
     // Draw projectile
-    ctx.fillStyle = '#f59e0b';
+    ctx.fillStyle = '#dfb6b2';
     ctx.beginPath();
     ctx.arc(x, y, 8, 0, 2 * Math.PI);
     ctx.fill();
     
     // Draw velocity vector
-    ctx.strokeStyle = '#8b5cf6';
+    ctx.strokeStyle = '#2b124c';
     ctx.lineWidth = 2;
     ctx.beginPath();
     ctx.moveTo(x, y);
@@ -222,7 +222,7 @@ export const SimulationCanvas = ({ simulationId, className }: SimulationCanvasPr
     ctx.stroke();
     
     // Draw trajectory trail
-    ctx.strokeStyle = '#f59e0b';
+    ctx.strokeStyle = '#dfb6b2';
     ctx.lineWidth = 1;
     ctx.globalAlpha = 0.3;
     ctx.beginPath();
@@ -250,22 +250,22 @@ export const SimulationCanvas = ({ simulationId, className }: SimulationCanvasPr
     const circuitHeight = 150;
     
     // Circuit outline
-    ctx.strokeStyle = '#374151';
+    ctx.strokeStyle = '#2b124c';
     ctx.lineWidth = 3;
     ctx.beginPath();
     ctx.rect(centerX - circuitWidth/2, centerY - circuitHeight/2, circuitWidth, circuitHeight);
     ctx.stroke();
     
     // Battery
-    ctx.fillStyle = '#22c55e';
+    ctx.fillStyle = '#522558';
     ctx.fillRect(centerX - circuitWidth/2 - 20, centerY - 20, 40, 40);
-    ctx.fillStyle = '#fff';
+    ctx.fillStyle = '#fbe4d8';
     ctx.font = '12px sans-serif';
     ctx.textAlign = 'center';
     ctx.fillText(`${voltage}V`, centerX - circuitWidth/2, centerY + 5);
     
     // Resistor
-    ctx.strokeStyle = '#ef4444';
+    ctx.strokeStyle = '#854f6c';
     ctx.lineWidth = 4;
     ctx.beginPath();
     ctx.moveTo(centerX + circuitWidth/2 - 40, centerY - 20);
@@ -278,7 +278,7 @@ export const SimulationCanvas = ({ simulationId, className }: SimulationCanvasPr
     
     // Current flow animation
     const flowOffset = (currentTime * 50) % 20;
-    ctx.strokeStyle = '#3b82f6';
+    ctx.strokeStyle = '#2b124c';
     ctx.lineWidth = 2;
     for (let i = 0; i < 10; i++) {
       const x = centerX - circuitWidth/2 + (i * 20) + flowOffset;
@@ -290,7 +290,7 @@ export const SimulationCanvas = ({ simulationId, className }: SimulationCanvasPr
     }
     
     // Display values
-    ctx.fillStyle = '#1f2937';
+    ctx.fillStyle = '#190019';
     ctx.font = '16px sans-serif';
     ctx.textAlign = 'left';
     ctx.fillText(`Voltage: ${voltage}V`, 20, 30);
@@ -306,7 +306,7 @@ export const SimulationCanvas = ({ simulationId, className }: SimulationCanvasPr
     const blockY = height / 2;
     
     // Draw ground
-    ctx.strokeStyle = '#6b7280';
+    ctx.strokeStyle = '#522558';
     ctx.lineWidth = 2;
     ctx.beginPath();
     ctx.moveTo(0, blockY + 25);
@@ -314,11 +314,11 @@ export const SimulationCanvas = ({ simulationId, className }: SimulationCanvasPr
     ctx.stroke();
     
     // Draw block
-    ctx.fillStyle = '#8b5cf6';
+    ctx.fillStyle = '#854f6c';
     ctx.fillRect(blockX - 25, blockY - 25, 50, 50);
     
     // Draw applied force vector
-    ctx.strokeStyle = '#ef4444';
+    ctx.strokeStyle = '#522558';
     ctx.lineWidth = 3;
     ctx.beginPath();
     ctx.moveTo(blockX + 25, blockY);
@@ -334,7 +334,7 @@ export const SimulationCanvas = ({ simulationId, className }: SimulationCanvasPr
     ctx.stroke();
     
     // Draw friction vector
-    ctx.strokeStyle = '#f59e0b';
+    ctx.strokeStyle = '#dfb6b2';
     ctx.lineWidth = 2;
     ctx.beginPath();
     ctx.moveTo(blockX - 25, blockY);
@@ -342,7 +342,7 @@ export const SimulationCanvas = ({ simulationId, className }: SimulationCanvasPr
     ctx.stroke();
     
     // Display values
-    ctx.fillStyle = '#1f2937';
+    ctx.fillStyle = '#190019';
     ctx.font = '14px sans-serif';
     ctx.textAlign = 'left';
     ctx.fillText(`Force: ${force}N`, 20, 30);
@@ -352,7 +352,7 @@ export const SimulationCanvas = ({ simulationId, className }: SimulationCanvasPr
   };
 
   const renderDefault = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
-    ctx.fillStyle = '#6b7280';
+    ctx.fillStyle = '#522558';
     ctx.font = '20px sans-serif';
     ctx.textAlign = 'center';
     ctx.fillText('Simulation Loading...', width / 2, height / 2);

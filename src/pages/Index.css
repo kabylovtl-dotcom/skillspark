@@ -177,17 +177,17 @@
   animation: bounce 2s infinite;
 }
 
-/* Единые градиенты */
+/* Единые градиенты - New Purple-Pink Palette */
 .gradient-primary {
-  background: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #2b124c 0%, #522558 50%, #854f6c 100%);
 }
 
 .gradient-background {
-  background: linear-gradient(135deg, #f8fafc 0%, #dbeafe 50%, #e0e7ff 100%);
+  background: linear-gradient(135deg, #fbe4d8 0%, #dfb6b2 50%, #f5d4c4 100%);
 }
 
 .gradient-background-dark {
-  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #312e81 100%);
+  background: linear-gradient(135deg, #190019 0%, #2b124c 50%, #522558 100%);
 }
 
 /* Универсальные стили карточек */
@@ -199,44 +199,44 @@
   @apply bg-white/10 dark:bg-white/10 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
 }
 
-/* Единые кнопки */
+/* Единые кнопки - New Purple-Pink Palette */
 .unified-button-primary {
-  @apply bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl transition-all duration-300;
+  @apply bg-gradient-to-r from-primary-700 to-primary-500 hover:from-primary-800 hover:to-primary-600 text-primary-50 shadow-lg hover:shadow-xl transition-all duration-300;
 }
 
 .unified-button-outline {
-  @apply border-2 border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950 transition-all duration-300;
+  @apply border-2 border-primary-600 text-primary-600 hover:bg-primary-50 dark:hover:bg-primary-950 transition-all duration-300;
 }
 
-/* Единые иконки */
+/* Единые иконки - New Purple-Pink Palette */
 .unified-icon-container {
-  @apply bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl shadow-lg;
+  @apply bg-gradient-to-r from-primary-600 to-accent-500 rounded-2xl shadow-lg;
 }
 
 /* Унифицированные тексты */
 .unified-heading {
-  @apply text-slate-800 dark:text-slate-100;
+  @apply text-primary-900 dark:text-primary-50;
 }
 
 .unified-text {
-  @apply text-slate-600 dark:text-slate-300;
+  @apply text-primary-700 dark:text-primary-300;
 }
 
 .unified-gradient-text {
-  @apply bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-primary-700 to-accent-600 bg-clip-text text-transparent;
 }
 
-/* Единые секции */
+/* Единые секции - New Purple-Pink Palette */
 .unified-section-light {
-  @apply bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm;
+  @apply bg-primary-50/50 dark:bg-primary-900/50 backdrop-blur-sm;
 }
 
 .unified-section-gradient {
-  @apply bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20;
+  @apply bg-gradient-to-br from-primary-50 to-accent-50 dark:from-primary-950/20 dark:to-accent-950/20;
 }
 
 .unified-section-dark {
-  @apply bg-gradient-to-r from-slate-800 via-blue-900 to-indigo-900;
+  @apply bg-gradient-to-r from-primary-800 via-primary-700 to-accent-700;
 }
 
 /* Эффекты наведения */
@@ -249,7 +249,7 @@
 }
 
 .hover-glow {
-  @apply transition-all duration-300 hover:shadow-blue-500/25 hover:shadow-2xl;
+  @apply transition-all duration-300 hover:shadow-primary-500/25 hover:shadow-2xl;
 }
 
 /* Плавные переходы */
@@ -284,9 +284,9 @@
   -webkit-backdrop-filter: blur(10px);
 }
 
-/* Градиентные границы */
+/* Градиентные границы - New Purple-Pink Palette */
 .gradient-border {
-  background: linear-gradient(135deg, #3b82f6, #6366f1, #8b5cf6);
+  background: linear-gradient(135deg, #2b124c, #522558, #854f6c);
   padding: 1px;
   border-radius: 1rem;
 }
@@ -296,9 +296,9 @@
   border-radius: calc(1rem - 1px);
 }
 
-/* Дополнительные эффекты */
+/* Дополнительные эффекты - New Purple-Pink Palette */
 .text-shimmer {
-  background: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #2b124c 0%, #522558 50%, #854f6c 100%);
   background-size: 200% 200%;
   animation: gradientShift 3s ease-in-out infinite;
   -webkit-background-clip: text;
@@ -306,17 +306,17 @@
   background-clip: text;
 }
 
-/* Улучшенные тени */
+/* Улучшенные тени - New Purple-Pink Palette */
 .shadow-unified {
   box-shadow: 
-    0 10px 25px -3px rgba(59, 130, 246, 0.1),
-    0 4px 6px -2px rgba(59, 130, 246, 0.05);
+    0 10px 25px -3px rgba(43, 18, 76, 0.1),
+    0 4px 6px -2px rgba(43, 18, 76, 0.05);
 }
 
 .shadow-unified-lg {
   box-shadow: 
-    0 20px 40px -12px rgba(59, 130, 246, 0.2),
-    0 8px 16px -4px rgba(59, 130, 246, 0.1);
+    0 20px 40px -12px rgba(43, 18, 76, 0.2),
+    0 8px 16px -4px rgba(43, 18, 76, 0.1);
 }
 
 /* Адаптивность */
@@ -335,9 +335,9 @@
   }
 }
 
-/* Фокус состояния для доступности */
+/* Фокус состояния для доступности - New Purple-Pink Palette */
 .focus-visible:focus {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid #2b124c;
   outline-offset: 2px;
 }
 

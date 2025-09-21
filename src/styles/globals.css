@@ -1,91 +1,91 @@
-/* Единая цветовая палитра для всего сайта */
+/* New Purple-Pink Color Palette for the entire site */
 :root {
-  /* Основные цвета */
-  --primary-50: #eff6ff;
-  --primary-100: #dbeafe;
-  --primary-200: #bfdbfe;
-  --primary-300: #93c5fd;
-  --primary-400: #60a5fa;
-  --primary-500: #3b82f6;
-  --primary-600: #2563eb;
-  --primary-700: #1d4ed8;
-  --primary-800: #1e40af;
-  --primary-900: #1e3a8a;
+  /* Primary Purple Shades */
+  --primary-50: #fbe4d8; /* #FBE4D8 - Very light peach */
+  --primary-100: #f7d9c8;
+  --primary-200: #f0c8b0;
+  --primary-300: #e8b598;
+  --primary-400: #dfb6b2; /* #DFB6B2 - Light pink */
+  --primary-500: #854f6c; /* #854F6C - Medium purple-pink */
+  --primary-600: #522558; /* #522558 - Medium purple */
+  --primary-700: #2b124c; /* #2B124C - Dark purple */
+  --primary-800: #1f0d35;
+  --primary-900: #190019; /* #190019 - Very dark purple */
   
-  /* Акцентные цвета */
-  --accent-50: #f0f9ff;
-  --accent-100: #e0f2fe;
-  --accent-200: #bae6fd;
-  --accent-300: #7dd3fc;
-  --accent-400: #38bdf8;
-  --accent-500: #0ea5e9;
-  --accent-600: #0284c7;
-  --accent-700: #0369a1;
-  --accent-800: #075985;
-  --accent-900: #0c4a6e;
+  /* Accent Pink Shades */
+  --accent-50: #fef7f6;
+  --accent-100: #fdeeee;
+  --accent-200: #fbdcd9;
+  --accent-300: #f8cac4;
+  --accent-400: #f5b8af;
+  --accent-500: #dfb6b2; /* #DFB6B2 - Light pink */
+  --accent-600: #d49d98;
+  --accent-700: #c9847e;
+  --accent-800: #be6b64;
+  --accent-900: #b3524a;
   
-  /* Нейтральные цвета */
-  --neutral-50: #f8fafc;
-  --neutral-100: #f1f5f9;
-  --neutral-200: #e2e8f0;
-  --neutral-300: #cbd5e1;
-  --neutral-400: #94a3b8;
-  --neutral-500: #64748b;
-  --neutral-600: #475569;
-  --neutral-700: #334155;
-  --neutral-800: #1e293b;
-  --neutral-900: #0f172a;
+  /* Neutral Colors - Purple-tinted */
+  --neutral-50: #fbe4d8; /* #FBE4D8 - Very light peach */
+  --neutral-100: #f5d4c4;
+  --neutral-200: #efc4b0;
+  --neutral-300: #e9b49c;
+  --neutral-400: #e3a488;
+  --neutral-500: #dd9474;
+  --neutral-600: #d78460;
+  --neutral-700: #d1744c;
+  --neutral-800: #cb6438;
+  --neutral-900: #c55424;
   
-  /* Успех */
-  --success-50: #f0fdf4;
-  --success-100: #dcfce7;
-  --success-200: #bbf7d0;
-  --success-300: #86efac;
-  --success-400: #4ade80;
-  --success-500: #22c55e;
-  --success-600: #16a34a;
-  --success-700: #15803d;
-  --success-800: #166534;
-  --success-900: #14532d;
+  /* Success - Purple tones */
+  --success-50: #f5f0f8;
+  --success-100: #ebe1f1;
+  --success-200: #d7c3e3;
+  --success-300: #c3a5d5;
+  --success-400: #af87c7;
+  --success-500: #522558; /* #522558 - Medium purple */
+  --success-600: #4a2250;
+  --success-700: #421f48;
+  --success-800: #3a1c40;
+  --success-900: #321938;
   
-  /* Предупреждение */
-  --warning-50: #fffbeb;
-  --warning-100: #fef3c7;
-  --warning-200: #fde68a;
-  --warning-300: #fcd34d;
-  --warning-400: #fbbf24;
-  --warning-500: #f59e0b;
-  --warning-600: #d97706;
-  --warning-700: #b45309;
-  --warning-800: #92400e;
-  --warning-900: #78350f;
+  /* Warning - Warm peach tones */
+  --warning-50: #fef9f6;
+  --warning-100: #fdf3ed;
+  --warning-200: #fbe7db;
+  --warning-300: #f9dbc9;
+  --warning-400: #f7cfb7;
+  --warning-500: #fbe4d8; /* #FBE4D8 - Light peach */
+  --warning-600: #f9d8c8;
+  --warning-700: #f7ccb8;
+  --warning-800: #f5c0a8;
+  --warning-900: #f3b498;
   
-  /* Ошибка */
-  --error-50: #fef2f2;
-  --error-100: #fee2e2;
-  --error-200: #fecaca;
-  --error-300: #fca5a5;
-  --error-400: #f87171;
-  --error-500: #ef4444;
-  --error-600: #dc2626;
-  --error-700: #b91c1c;
-  --error-800: #991b1b;
-  --error-900: #7f1d1d;
+  /* Error - Purple-pink tones */
+  --error-50: #fdf7f8;
+  --error-100: #fbeff1;
+  --error-200: #f7dfe3;
+  --error-300: #f3cfd5;
+  --error-400: #efbfc7;
+  --error-500: #854f6c; /* #854F6C - Medium purple-pink */
+  --error-600: #7a4662;
+  --error-700: #6f3d58;
+  --error-800: #64344e;
+  --error-900: #592b44;
   
-  /* Градиенты */
-  --gradient-primary: linear-gradient(135deg, var(--primary-500) 0%, var(--accent-500) 100%);
-  --gradient-secondary: linear-gradient(135deg, var(--accent-500) 0%, var(--success-500) 100%);
-  --gradient-warm: linear-gradient(135deg, var(--warning-500) 0%, var(--error-500) 100%);
-  --gradient-cool: linear-gradient(135deg, var(--primary-500) 0%, var(--success-500) 100%);
+  /* Purple-Pink Gradients */
+  --gradient-primary: linear-gradient(135deg, #2b124c 0%, #522558 100%);
+  --gradient-secondary: linear-gradient(135deg, #854f6c 0%, #dfb6b2 100%);
+  --gradient-warm: linear-gradient(135deg, #fbe4d8 0%, #dfb6b2 100%);
+  --gradient-cool: linear-gradient(135deg, #2b124c 0%, #854f6c 100%);
   
-  /* Тени */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  /* Enhanced Shadows with Purple Tint */
+  --shadow-sm: 0 1px 2px 0 rgba(43, 18, 76, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(43, 18, 76, 0.1), 0 2px 4px -2px rgba(43, 18, 76, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(43, 18, 76, 0.1), 0 4px 6px -4px rgba(43, 18, 76, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(43, 18, 76, 0.1), 0 8px 10px -6px rgba(43, 18, 76, 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgba(43, 18, 76, 0.25);
   
-  /* Скругления */
+  /* Border Radius */
   --radius-sm: 0.375rem;
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;
@@ -93,24 +93,85 @@
   --radius-2xl: 1.5rem;
   --radius-3xl: 2rem;
   
-  /* Переходы */
+  /* Transitions */
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Темная тема */
+/* Dark Theme - Purple-Pink Palette */
 [data-theme="dark"] {
-  --neutral-50: #0f172a;
-  --neutral-100: #1e293b;
-  --neutral-200: #334155;
-  --neutral-300: #475569;
-  --neutral-400: #64748b;
-  --neutral-500: #94a3b8;
-  --neutral-600: #cbd5e1;
-  --neutral-700: #e2e8f0;
-  --neutral-800: #f1f5f9;
-  --neutral-900: #f8fafc;
+  /* Dark Primary Purple Shades */
+  --primary-50: #190019; /* #190019 - Very dark purple */
+  --primary-100: #1f0d35;
+  --primary-200: #2b124c; /* #2B124C - Dark purple */
+  --primary-300: #3a1a5c;
+  --primary-400: #522558; /* #522558 - Medium purple */
+  --primary-500: #6a3a6c;
+  --primary-600: #854f6c; /* #854F6C - Medium purple-pink */
+  --primary-700: #a0647c;
+  --primary-800: #bb798c;
+  --primary-900: #dfb6b2; /* #DFB6B2 - Light pink */
+  
+  /* Dark Accent Pink Shades */
+  --accent-50: #190019; /* #190019 - Very dark purple */
+  --accent-100: #2b124c; /* #2B124C - Dark purple */
+  --accent-200: #522558; /* #522558 - Medium purple */
+  --accent-300: #854f6c; /* #854F6C - Medium purple-pink */
+  --accent-400: #a0647c;
+  --accent-500: #bb798c;
+  --accent-600: #d68ea6;
+  --accent-700: #f1a3c0;
+  --accent-800: #f6b8d1;
+  --accent-900: #fbe4d8; /* #FBE4D8 - Light peach */
+  
+  /* Dark Neutral Colors */
+  --neutral-50: #190019; /* #190019 - Very dark purple */
+  --neutral-100: #2b124c; /* #2B124C - Dark purple */
+  --neutral-200: #522558; /* #522558 - Medium purple */
+  --neutral-300: #854f6c; /* #854F6C - Medium purple-pink */
+  --neutral-400: #a0647c;
+  --neutral-500: #bb798c;
+  --neutral-600: #d68ea6;
+  --neutral-700: #f1a3c0;
+  --neutral-800: #f6b8d1;
+  --neutral-900: #fbe4d8; /* #FBE4D8 - Light peach */
+  
+  /* Dark Success - Purple tones */
+  --success-50: #190019; /* #190019 - Very dark purple */
+  --success-100: #2b124c; /* #2B124C - Dark purple */
+  --success-200: #522558; /* #522558 - Medium purple */
+  --success-300: #6a3a6c;
+  --success-400: #854f6c; /* #854F6C - Medium purple-pink */
+  --success-500: #a0647c;
+  --success-600: #bb798c;
+  --success-700: #d68ea6;
+  --success-800: #f1a3c0;
+  --success-900: #fbe4d8; /* #FBE4D8 - Light peach */
+  
+  /* Dark Warning - Warm tones */
+  --warning-50: #190019; /* #190019 - Very dark purple */
+  --warning-100: #2b124c; /* #2B124C - Dark purple */
+  --warning-200: #522558; /* #522558 - Medium purple */
+  --warning-300: #854f6c; /* #854F6C - Medium purple-pink */
+  --warning-400: #a0647c;
+  --warning-500: #bb798c;
+  --warning-600: #d68ea6;
+  --warning-700: #f1a3c0;
+  --warning-800: #f6b8d1;
+  --warning-900: #fbe4d8; /* #FBE4D8 - Light peach */
+  
+  /* Dark Error - Purple-pink tones */
+  --error-50: #190019; /* #190019 - Very dark purple */
+  --error-100: #2b124c; /* #2B124C - Dark purple */
+  --error-200: #522558; /* #522558 - Medium purple */
+  --error-300: #854f6c; /* #854F6C - Medium purple-pink */
+  --error-400: #a0647c;
+  --error-500: #bb798c;
+  --error-600: #d68ea6;
+  --error-700: #f1a3c0;
+  --error-800: #f6b8d1;
+  --error-900: #fbe4d8; /* #FBE4D8 - Light peach */
 }
 
 /* Утилитарные классы */
