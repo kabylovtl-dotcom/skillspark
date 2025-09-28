@@ -2,61 +2,89 @@
 @tailwind components;
 @tailwind utilities;
 
-/* SkillSpark KG Design System - Educational STEM Platform */
+/* Mobile-first responsive design improvements */
+@layer base {
+  html {
+    /* Prevent horizontal scroll on mobile */
+    overflow-x: hidden;
+  }
+  
+  body {
+    /* Improve touch scrolling on mobile */
+    -webkit-overflow-scrolling: touch;
+    /* Prevent text size adjustment on orientation change */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  
+  /* Improve button touch targets on mobile */
+  button, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Better focus states for accessibility */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
+  }
+}
+
+/* DeltaYurt Design System - Educational STEM Platform */
 
 @layer base {
   :root {
-    /* New Purple-Pink Color Palette - Light Theme */
-    --background: 17 78% 91%; /* #FBE4D8 - Light peach */
-    --foreground: 300 100% 5%; /* #190019 - Very dark purple */
+    /* DeltaYurt Purple-Blue Color Palette - Light Theme */
+    --background: 240 100% 98%; /* Very light blue */
+    --foreground: 262 61% 15%; /* Dark purple text */
     
-    /* Primary Purple */
-    --primary: 262 61% 18%; /* #2B124C - Dark purple */
-    --primary-foreground: 17 78% 91%; /* #FBE4D8 - Light peach */
-    --primary-light: 295 35% 35%; /* Lighter version of #522558 */
-    --primary-dark: 300 100% 5%; /* #190019 - Very dark purple */
+    /* Primary Purple - DeltaYurt Brand Color */
+    --primary: 262 61% 30%; /* #5B2C83 - DeltaYurt purple */
+    --primary-foreground: 0 0% 100%; /* White text on purple */
+    --primary-light: 262 61% 40%; /* Lighter version of #5B2C83 */
+    --primary-dark: 262 61% 20%; /* Darker version of #5B2C83 */
     
-    /* Secondary Purple-Pink */
-    --secondary: 325 25% 43%; /* #854F6C - Medium purple-pink */
-    --secondary-foreground: 17 78% 91%; /* #FBE4D8 - Light peach */
+    /* Secondary Blue */
+    --secondary: 240 100% 60%; /* Blue */
+    --secondary-foreground: 0 0% 100%; /* White text */
     
-    /* Accent Pink */
-    --accent: 6 35% 78%; /* #DFB6B2 - Light pink */
-    --accent-foreground: 300 100% 5%; /* #190019 - Very dark purple */
+    /* Accent Purple */
+    --accent: 262 61% 60%; /* Purple accent */
+    --accent-foreground: 0 0% 100%; /* White text */
     
-    /* Success - Adjusted for purple theme */
-    --success: 295 35% 25%; /* #522558 - Medium purple */
-    --success-foreground: 17 78% 91%; /* #FBE4D8 - Light peach */
-    --success-light: 325 25% 53%; /* Lighter purple-pink */
+    /* Success - Green */
+    --success: 142 76% 36%; /* Green */
+    --success-foreground: 0 0% 100%; /* White text */
+    --success-light: 142 76% 46%; /* Lighter green */
     
-    /* Warning - Warm accent */
-    --warning: 17 78% 75%; /* Darker peach */
-    --warning-foreground: 300 100% 5%; /* #190019 - Very dark purple */
+    /* Warning - Orange */
+    --warning: 25 95% 53%; /* Orange */
+    --warning-foreground: 0 0% 100%; /* White text */
     
     /* Muted colors */
-    --muted: 6 35% 85%; /* Very light pink */
-    --muted-foreground: 262 61% 25%; /* Darker purple for text */
+    --muted: 240 100% 95%; /* Very light blue */
+    --muted-foreground: 262 61% 25%; /* Dark purple for text */
     
     /* Card and Surface Colors */
-    --card: 17 78% 95%; /* Very light peach */
-    --card-foreground: 300 100% 5%; /* #190019 - Very dark purple */
-    --popover: 17 78% 95%; /* Very light peach */
-    --popover-foreground: 300 100% 5%; /* #190019 - Very dark purple */
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 262 61% 15%; /* Dark purple text */
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 262 61% 15%; /* Dark purple text */
     
     /* Interactive States */
-    --destructive: 325 25% 43%; /* #854F6C - Medium purple-pink */
-    --destructive-foreground: 17 78% 91%; /* #FBE4D8 - Light peach */
+    --destructive: 0 84% 60%; /* Red */
+    --destructive-foreground: 0 0% 100%; /* White text */
     
     /* Border and Input */
-    --border: 6 35% 82%; /* Light pink border */
-    --input: 6 35% 85%; /* Very light pink input */
-    --ring: 262 61% 18%; /* #2B124C - Dark purple focus ring */
+    --border: 240 100% 90%; /* Light blue border */
+    --input: 240 100% 95%; /* Very light blue input */
+    --ring: 262 61% 30%; /* Purple focus ring */
     
-    /* Purple-Pink Gradients */
+    /* DeltaYurt Purple-Blue Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
     --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)));
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
     
     /* Shadows */
     --shadow-soft: 0 4px 6px -1px hsl(var(--primary) / 0.1);
@@ -69,69 +97,69 @@
 
     --radius: 0.75rem;
 
-    --sidebar-background: 17 78% 95%;
+    --sidebar-background: 240 100% 98%;
 
-    --sidebar-foreground: 300 100% 5%;
+    --sidebar-foreground: 262 61% 15%;
 
-    --sidebar-primary: 262 61% 18%;
+    --sidebar-primary: 262 61% 30%;
 
-    --sidebar-primary-foreground: 17 78% 91%;
+    --sidebar-primary-foreground: 0 0% 100%;
 
-    --sidebar-accent: 6 35% 85%;
+    --sidebar-accent: 240 100% 95%;
 
-    --sidebar-accent-foreground: 300 100% 5%;
+    --sidebar-accent-foreground: 262 61% 15%;
 
-    --sidebar-border: 6 35% 82%;
+    --sidebar-border: 240 100% 90%;
 
-    --sidebar-ring: 262 61% 18%;
+    --sidebar-ring: 262 61% 30%;
   }
 
   .dark {
-    /* New Purple-Pink Color Palette - Dark Theme */
-    --background: 300 100% 5%; /* #190019 - Very dark purple */
-    --foreground: 17 78% 91%; /* #FBE4D8 - Light peach */
+    /* DeltaYurt Purple-Blue Color Palette - Dark Theme */
+    --background: 240 100% 5%; /* Very dark blue */
+    --foreground: 240 100% 95%; /* Light blue text */
     
-    /* Dark Primary */
-    --primary: 262 61% 28%; /* Lighter dark purple */
-    --primary-foreground: 17 78% 91%; /* #FBE4D8 - Light peach */
-    --primary-light: 295 35% 35%; /* #522558 - Medium purple */
-    --primary-dark: 300 100% 5%; /* #190019 - Very dark purple */
+    /* Dark Primary - DeltaYurt Brand Color */
+    --primary: 262 61% 35%; /* Lighter DeltaYurt purple for dark theme */
+    --primary-foreground: 0 0% 100%; /* White text on purple */
+    --primary-light: 262 61% 45%; /* Lighter version for dark theme */
+    --primary-dark: 262 61% 25%; /* Darker version for dark theme */
     
     /* Dark Secondary */
-    --secondary: 325 25% 53%; /* Lighter purple-pink */
-    --secondary-foreground: 17 78% 91%; /* #FBE4D8 - Light peach */
+    --secondary: 240 100% 70%; /* Lighter blue for dark theme */
+    --secondary-foreground: 0 0% 100%; /* White text */
     
     /* Dark Accent */
-    --accent: 6 35% 68%; /* Darker pink */
-    --accent-foreground: 300 100% 5%; /* #190019 - Very dark purple */
+    --accent: 262 61% 70%; /* Lighter purple */
+    --accent-foreground: 0 0% 100%; /* White text */
     
     /* Dark Success */
-    --success: 295 35% 35%; /* #522558 - Medium purple */
-    --success-foreground: 17 78% 91%; /* #FBE4D8 - Light peach */
-    --success-light: 325 25% 43%; /* #854F6C - Medium purple-pink */
+    --success: 142 76% 46%; /* Lighter green */
+    --success-foreground: 0 0% 100%; /* White text */
+    --success-light: 142 76% 56%; /* Even lighter green */
     
     /* Dark Warning */
-    --warning: 17 78% 65%; /* Darker peach */
-    --warning-foreground: 300 100% 5%; /* #190019 - Very dark purple */
+    --warning: 25 95% 63%; /* Lighter orange */
+    --warning-foreground: 0 0% 100%; /* White text */
     
     /* Dark Muted */
-    --muted: 262 61% 8%; /* Very dark purple */
-    --muted-foreground: 6 35% 78%; /* #DFB6B2 - Light pink */
+    --muted: 240 100% 8%; /* Very dark blue */
+    --muted-foreground: 240 100% 60%; /* Light blue muted */
     
     /* Dark Surfaces */
-    --card: 262 61% 8%; /* Very dark purple */
-    --card-foreground: 17 78% 91%; /* #FBE4D8 - Light peach */
-    --popover: 262 61% 8%; /* Very dark purple */
-    --popover-foreground: 17 78% 91%; /* #FBE4D8 - Light peach */
+    --card: 240 100% 8%; /* Very dark blue */
+    --card-foreground: 240 100% 95%; /* Light blue text */
+    --popover: 240 100% 8%; /* Very dark blue */
+    --popover-foreground: 240 100% 95%; /* Light blue text */
     
     /* Dark Interactive */
-    --destructive: 325 25% 53%; /* Lighter purple-pink */
-    --destructive-foreground: 17 78% 91%; /* #FBE4D8 - Light peach */
+    --destructive: 0 84% 70%; /* Lighter red */
+    --destructive-foreground: 0 0% 100%; /* White text */
     
     /* Dark Borders */
-    --border: 262 61% 12%; /* Dark purple border */
-    --input: 262 61% 10%; /* Very dark purple input */
-    --ring: 262 61% 28%; /* Dark purple focus ring */
+    --border: 240 100% 12%; /* Dark blue border */
+    --input: 240 100% 10%; /* Very dark blue input */
+    --ring: 262 61% 40%; /* Purple focus ring */
     
     /* Dark Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
@@ -194,13 +222,42 @@
 
   /* Custom animation keyframes */
   @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
   }
   
   @keyframes glow {
     0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
     50% { box-shadow: 0 0 30px hsl(var(--primary) / 0.6); }
+  }
+
+  /* Kyrgyz Cultural Animations */
+  @keyframes kyrgyz-wave {
+    0%, 100% { transform: translateX(0px) scale(1); }
+    25% { transform: translateX(5px) scale(1.02); }
+    50% { transform: translateX(0px) scale(1); }
+    75% { transform: translateX(-5px) scale(0.98); }
+  }
+
+  @keyframes mountain-glow {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.4; }
+  }
+
+  @keyframes cultural-pattern {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.1); }
+    100% { transform: rotate(360deg) scale(1); }
+  }
+
+  @keyframes float-delayed {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(-1deg); }
+  }
+
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(0.5deg); }
   }
   
   .animate-float {
@@ -209,5 +266,37 @@
   
   .animate-glow {
     animation: glow 2s ease-in-out infinite;
+  }
+
+  .animate-kyrgyz-wave {
+    animation: kyrgyz-wave 4s ease-in-out infinite;
+  }
+
+  .animate-mountain-glow {
+    animation: mountain-glow 3s ease-in-out infinite;
+  }
+
+  .animate-cultural-pattern {
+    animation: cultural-pattern 8s linear infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float-delayed 3.5s ease-in-out infinite;
+  }
+
+  .animate-float-slow {
+    animation: float-slow 4s ease-in-out infinite;
+  }
+
+  /* Fade in up animation for AnimatedText component */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }

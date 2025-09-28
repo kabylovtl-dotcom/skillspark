@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Simulation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 600px;
+        }
+        .pendulum {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            position: relative;
+        }
+        .string {
+            width: 2px;
+            height: 100px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform-origin: top center;
+            animation: swing 2s ease-in-out infinite;
+        }
+        .bob {
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            border-radius: 50%;
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        @keyframes swing {
+            0%, 100% { transform: translateX(-50%) rotate(-30deg); }
+            50% { transform: translateX(-50%) rotate(30deg); }
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+        .button {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+            transition: transform 0.2s;
+        }
+        .button:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Тестовая симуляция маятника</h1>
+        <div class="pendulum">
+            <div class="string"></div>
+            <div class="bob"></div>
+        </div>
+        <p>Это простая тестовая симуляция маятника. Если вы видите это, значит iframe работает правильно!</p>
+        <p>Анимированный маятник демонстрирует гармонические колебания.</p>
+        <button class="button" onclick="window.close()">Закрыть</button>
+        <button class="button" onclick="window.open('/pendulum-lab_en.html', '_blank')">Открыть полную симуляцию</button>
+    </div>
+</body>
+</html>

@@ -1,20 +1,41 @@
-import { Moon, Sun } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { useTheme } from "@/hooks/use-theme";
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { useTheme } from '@/contexts/ThemeContext';
+import { Sun, Moon, Monitor } from 'lucide-react';
 
-export function ThemeToggle() {
-  const { theme, toggleTheme } = useTheme();
+const ThemeToggle: React.FC = () => {
+  const { theme, setTheme } = useTheme();
+
+  const themes = [
+    { value: 'light', icon: Sun, label: 'Светлая' },
+    { value: 'dark', icon: Moon, label: 'Темная' },
+    { value: 'system', icon: Monitor, label: 'Системная' }
+  ] as const;
+
+  const currentTheme = themes.find(t => t.value === theme) || themes[0];
+  const CurrentIcon = currentTheme.icon;
+
+  const cycleTheme = () => {
+    const currentIndex = themes.findIndex(t => t.value === theme);
+    const nextIndex = (currentIndex + 1) % themes.length;
+    setTheme(themes[nextIndex].value);
+  };
 
   return (
     <Button
       variant="outline"
       size="sm"
-      onClick={toggleTheme}
-      className="relative"
+      onClick={cycleTheme}
+      className="relative overflow-hidden"
     >
-      <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-      <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-      <span className="sr-only">Toggle theme</span>
+      <div
+        className="flex items-center gap-2"
+      >
+        <CurrentIcon className="h-4 w-4" />
+        <span className="hidden sm:inline">{currentTheme.label}</span>
+      </div>
     </Button>
   );
-}
+};
+
+export default ThemeToggle;

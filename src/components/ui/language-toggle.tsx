@@ -29,7 +29,6 @@ export const LanguageToggle = () => {
       <DropdownMenuContent align="end" className="w-40">
         {languages.map((lang) => (
           <DropdownMenuItem
-            key={lang.code}
             onClick={() => setLanguage(lang.code)}
             className={`cursor-pointer ${language === lang.code ? 'bg-accent' : ''}`}
           >

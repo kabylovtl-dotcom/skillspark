@@ -638,7 +638,6 @@ E = ½ × m × v²
               <div className="grid grid-cols-2 gap-2">
                 {quickPrompts.map((prompt, index) => (
                   <Button
-                    key={index}
                     variant="outline"
                     size="sm"
                     onClick={() => handleQuickPrompt(prompt)}
@@ -720,7 +719,6 @@ E = ½ × m × v²
             <div className="flex-1 overflow-y-auto p-6 space-y-6 bg-gradient-to-b from-gray-50/50 to-white/50 dark:from-gray-900/50 dark:to-gray-800/50">
               {messages.map((message) => (
                 <div
-                  key={message.id}
                   className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   <div

@@ -38,7 +38,8 @@ export default {
 					600: 'var(--primary-600)',
 					700: 'var(--primary-700)',
 					800: 'var(--primary-800)',
-					900: 'var(--primary-900)'
+					900: 'var(--primary-900)',
+					950: 'var(--primary-900)'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -56,7 +57,8 @@ export default {
 					600: 'var(--accent-600)',
 					700: 'var(--accent-700)',
 					800: 'var(--accent-800)',
-					900: 'var(--accent-900)'
+					900: 'var(--accent-900)',
+					950: 'var(--accent-900)'
 				},
 				success: {
 					DEFAULT: 'hsl(var(--success))',

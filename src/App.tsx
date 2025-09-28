@@ -1,55 +1,51 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ThemeProvider } from "@/hooks/use-theme";
-import { LanguageProvider } from "@/contexts/LanguageContext";
-import { AuthProvider } from "@/contexts/AuthContext";
-import "@/styles/globals.css";
-import Index from "./pages/Index";
-import About from "./pages/About";
-import Simulations from "./pages/Simulations";
-import SimulationDetail from "./pages/SimulationDetail";
-import PendulumDemo from "./pages/PendulumDemo";
-import OnlineLessons from "./pages/OnlineLessons";
-import PhysicsLessons from "./pages/PhysicsLessons";
-import ChatGPT from "./pages/ChatGPT";
-import Login from "./pages/Login";
-import Profile from "./pages/Profile";
-import NotFound from "./pages/NotFound";
+import React, { useEffect } from 'react';
+import { useAuthStore } from '@/store/authStore';
+import { useSocketStore } from '@/store/socketStore';
+import { ThemeProvider } from '@/contexts/ThemeContext';
+import AuthForm from '@/components/auth/AuthForm';
+import Header from '@/components/layout/Header';
+import TeacherInterface from '@/components/teacher/TeacherInterface';
+import StudentInterface from '@/components/student/StudentInterface';
+import ClassroomRoomPage from '@/pages/ClassroomRoom';
+import './i18n'; // Initialize i18n
 
-const queryClient = new QueryClient();
+function App() {
+  const { isAuthenticated, user } = useAuthStore();
+  const { connect } = useSocketStore();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <ThemeProvider defaultTheme="light" storageKey="skillspark-theme">
-      <LanguageProvider>
-        <AuthProvider>
-          <TooltipProvider>
-            <Toaster />
-            <Sonner />
-            <BrowserRouter>
-              <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/simulations" element={<Simulations />} />
-                <Route path="/simulations/:id" element={<SimulationDetail />} />
-                <Route path="/pendulum-demo" element={<PendulumDemo />} />
-                <Route path="/online-lessons" element={<OnlineLessons />} />
-                <Route path="/online-lessons/physics" element={<PhysicsLessons />} />
-                <Route path="/chatgpt" element={<ChatGPT />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/profile" element={<Profile />} />
-                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </BrowserRouter>
-          </TooltipProvider>
-        </AuthProvider>
-      </LanguageProvider>
+  useEffect(() => {
+    // Connect to socket when app starts
+    connect();
+  }, [connect]);
+
+  // Show auth form for unauthenticated users
+  if (!isAuthenticated || !user) {
+    return (
+      <ThemeProvider>
+        <AuthForm />
+      </ThemeProvider>
+    );
+  }
+
+  // Check if we're in classroom mode (this would be determined by URL or state)
+  const isInClassroom = window.location.pathname === '/classroom';
+
+  if (isInClassroom) {
+    return (
+      <ThemeProvider>
+        <ClassroomRoomPage />
+      </ThemeProvider>
+    );
+  }
+
+  return (
+    <ThemeProvider>
+      <div className="min-h-screen bg-slate-50 dark:bg-slate-900">
+        <Header />
+        {user.role === 'teacher' ? <TeacherInterface /> : <StudentInterface />}
+      </div>
     </ThemeProvider>
-  </QueryClientProvider>
-);
+  );
+}
 
 export default App;
